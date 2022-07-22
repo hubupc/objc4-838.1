@@ -3525,13 +3525,13 @@ void _read_images(header_info **hList, uint32_t hCount, int totalClasses, int un
         // (linked before OS X 10.11)
         // Note: we must check for macOS, because Catalyst and Almond apps
         // return false for a Mac SDK check! rdar://78225780
-        if (dyld_get_active_platform() == PLATFORM_MACOS /*&& !dyld_program_sdk_at_least(dyld_platform_version_macOS_10_11)*/) {
-            DisableNonpointerIsa = true;
-            if (PrintRawIsa) {
-                _objc_inform("RAW ISA: disabling non-pointer isa because "
-                             "the app is too old.");
-            }
-        }
+//         if (dyld_get_active_platform() == PLATFORM_MACOS && !dyld_program_sdk_at_least(dyld_platform_version_macOS_10_11)) {
+//             DisableNonpointerIsa = true;
+//             if (PrintRawIsa) {
+//                 _objc_inform("RAW ISA: disabling non-pointer isa because "
+//                              "the app is too old.");
+//             }
+//         }
 
         // Disable non-pointer isa if the app has a __DATA,__objc_rawisa section
         // New apps that load old extensions may need this.
