@@ -128,7 +128,7 @@
     方案：将 objc-shared-cache.h 拷贝到 objc4-838.1/PrivateHeaders/ 
 
 26. 问题：error: use of undeclared identifier 'dyld_platform_version_macOS_10_11'  
-    方案：注释：objc-runtime-new.mm 中 Line 3528 中的条件：&& !dyld_program_sdk_at_least(dyld_platform_version_macOS_10_11)  
+    方案：注释：objc-runtime-new.mm 中 Line 3528-3534
 
 27. 问题：error: use of undeclared identifier 'dyld_fall_2018_os_versions'  
     方案：注释：objc-runtime-new.mm 中 Line 8381 中的条件： && dyld_program_sdk_at_least(dyld_fall_2018_os_versions)  
